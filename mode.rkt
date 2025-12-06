@@ -1,0 +1,10 @@
+#lang racket
+(provide interactive?)
+
+(define interactive?
+  (let ([args (current-command-line-arguements)])
+    (cond
+     [( (vector-length args) 0) #t]
+     [(string=? (vector-ref args 0) "-b") #f]
+     [(string=? (vector-ref args 0) "--batch") #f]
+     [else #t])))
