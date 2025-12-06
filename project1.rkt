@@ -1,4 +1,5 @@
 #lang racket
+(require "mode.rkt")
 
 ;;Mode detection from mode.rkt
 (define prompt?
